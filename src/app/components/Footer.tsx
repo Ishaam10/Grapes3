@@ -1,25 +1,35 @@
 import { Facebook, Youtube } from "lucide-react";
+import tifrLogo from "../../assets/tifr-logo.png";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1A232B] text-gray-400 py-10 mt-20">
+    <footer className="bg-[#1A232B] text-gray-400 py-10">
       <div className="max-w-7xl mx-auto px-6">
 
         <div className="flex flex-col md:flex-row items-center justify-between">
 
+          {/* TIFR Logo */}
           <div>
-            <img
-              src="/assets/tifr-logo.png"
-              alt="TIFR"
-              className="h-14 opacity-80 grayscale"
-            />
+            <a
+              href="https://www.tifr.res.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={tifrLogo}
+                alt="TIFR Logo"
+                className="h-16 grayscale opacity-70 hover:opacity-100 hover:scale-105 transition duration-300"
+              />
+            </a>
           </div>
 
+          {/* Social Icons */}
           <div className="flex gap-6">
 
             <a
               href="https://www.facebook.com/CRL.TIFR"
               target="_blank"
+              rel="noopener noreferrer"
               className="w-14 h-14 flex items-center justify-center rounded-full bg-[#2E3A46] hover:bg-[#3B4A58] transition"
             >
               <Facebook size={22} className="text-gray-300"/>
@@ -28,7 +38,8 @@ export default function Footer() {
             <a
               href="https://x.com/CRL_TIFR"
               target="_blank"
-              className="w-14 h-14 flex items-center justify-center rounded-full bg-[#2E3A46] hover:bg-[#3B4A58] transition"
+              rel="noopener noreferrer"
+              className="w-14 h-14 flex items-center justify-center rounded-full bg-[#2E3A46] hover:bg-[#3B4A58] text-gray-300 font-semibold"
             >
               X
             </a>
@@ -36,6 +47,7 @@ export default function Footer() {
             <a
               href="https://www.youtube.com/@cosmicraylaboratorytifr5078"
               target="_blank"
+              rel="noopener noreferrer"
               className="w-14 h-14 flex items-center justify-center rounded-full bg-[#2E3A46] hover:bg-[#3B4A58] transition"
             >
               <Youtube size={22} className="text-gray-300"/>

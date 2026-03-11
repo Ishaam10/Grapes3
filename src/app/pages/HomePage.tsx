@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Radio, Zap, CloudRain } from "lucide-react";
 import CountUp from "react-countup";
-import { Facebook, X, Youtube } from "lucide-react";
 
 import hero1 from "../../assets/hero1.jpeg";
 import hero2 from "../../assets/hero2.jpeg";
@@ -12,7 +11,6 @@ import cosmicRayShower from "../../assets/cosmicRayShower.jpg";
 import protonSpectrum from "../../assets/protonSpectrum.png";
 import anisotropyMap from "../../assets/anisotropyMap.png";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
-import tifrLogo from "../../assets/tifr-logo.png";
 
 export default function HomePage() {
   const heroImages = [hero1, hero2, hero3];
@@ -26,8 +24,9 @@ export default function HomePage() {
 
     return () => clearInterval(interval);
   }, []);
+
   return (
-    <div>
+    <div className="flex flex-col min-h-screen bg-[#132F4B]">
       {/* Hero Section */}
 <section className="relative h-screen flex items-center justify-center text-white overflow-hidden">
 
@@ -109,7 +108,7 @@ export default function HomePage() {
       </section>
 
       {/* Research Areas */}
-      <section className="py-20 bg-[#132F4B] text-white">
+      <section className="py-20 pb-32 bg-[#132F4B] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl mb-4">Research Areas</h2>
@@ -197,7 +196,7 @@ export default function HomePage() {
       </section>
 
       {/* Science Highlights */}
-<section className="py-20 bg-[#132F4B] text-white">
+<section className="py-20 pb-32 bg-[#132F4B] text-white">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
     <div className="text-center mb-12">
@@ -284,7 +283,7 @@ export default function HomePage() {
     </div>
   </div>
 </section>
-      <section className="py-20 bg-[#132F4B] text-white">
+      <section className="py-20 pb-32 bg-[#132F4B] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl mb-4">Latest News</h2>
@@ -346,77 +345,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <footer className="bg-[#1A232B] text-gray-400 py-10">
-  <div className="max-w-7xl mx-auto px-6">
 
-    <div className="flex flex-col md:flex-row items-center justify-between">
-
-      {/* Left Logo */}
-      <div className="flex items-center gap-4 mb-6 md:mb-0">
-        <a
-  href="https://www.tifr.res.in/"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="transition duration-300 hover:scale-105 hover:opacity-100"
->
-  <img
-    src={tifrLogo}
-    alt="TIFR Logo"
-    className="h-14 opacity-70 grayscale hover:grayscale-0"
-  />
-</a>
-      </div>
-
-      <div className="flex gap-6">
-
-  <a
-  href="https://www.facebook.com/CRL.TIFR"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="w-14 h-14 flex items-center justify-center rounded-full bg-[#2E3A46] hover:bg-[#3B4A58] transition"
->
-  <Facebook size={22} strokeWidth={1.5} className="text-gray-300" />
-</a>
-
-  <a
-  href="https://x.com/CRL_TIFR"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="w-14 h-14 flex items-center justify-center rounded-full bg-[#2E3A46] hover:bg-[#3B4A58] transition"
->
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    className="w-6 h-6 fill-gray-300"
-  >
-    <path d="M18.244 2H21.5l-7.19 8.21L22.5 22h-6.48l-5.08-6.66L4.94 22H1.67l7.68-8.77L1.5 2h6.63l4.6 6.06L18.24 2zm-1.14 18h1.8L7.2 3.9H5.3l11.8 16.1z"/>
-  </svg>
-</a>
-
-  <a
-  href="https://www.youtube.com/@cosmicraylaboratorytifr5078"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="w-14 h-14 flex items-center justify-center rounded-full bg-[#2E3A46] hover:bg-[#3B4A58] transition"
->
-  <Youtube size={22} strokeWidth={1.5} className="text-gray-300" />
-</a>
-
-</div>
-    </div>
-
-    <hr className="border-gray-600 my-6" />
-
-    {/* Copyright */}
-    <p
-  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-  className="text-sm text-gray-400 cursor-pointer hover:text-white transition"
->
-  Copyright ©2023 Cosmic Ray Laboratory - TIFR, Ooty. All rights reserved. Contact webmaster
-</p>
-
-  </div>
-</footer>
     </div>
   );
 }
