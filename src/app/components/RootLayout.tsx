@@ -1,6 +1,7 @@
 import { Outlet, Link, useLocation } from "react-router";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import Footer from "./Footer";
 
 export function RootLayout() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -24,10 +25,12 @@ export function RootLayout() {
 
   return (
     <div className="min-h-screen flex flex-col">
+
       {/* Header */}
       <header className="bg-white shadow-sm sticky top-0 z-50">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
+
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2">
               <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
@@ -64,6 +67,7 @@ export function RootLayout() {
                 <Menu className="h-6 w-6" />
               )}
             </button>
+
           </div>
 
           {/* Mobile Navigation */}
@@ -93,80 +97,9 @@ export function RootLayout() {
         <Outlet />
       </main>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white mt-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white text-xl">G3</span>
-                </div>
-                <span className="text-xl">GRAPES-3</span>
-              </div>
-              <p className="text-gray-400 text-sm">
-                A cosmic ray experiment studying extensive air showers at TeV-PeV energies.
-              </p>
-            </div>
+      {/* Global Footer */}
+      <Footer />
 
-            <div>
-              <h3 className="text-lg mb-4">Quick Links</h3>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <Link to="/about" className="text-gray-400 hover:text-white">
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/research" className="text-gray-400 hover:text-white">
-                    Research Areas
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/team" className="text-gray-400 hover:text-white">
-                    Our Team
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-lg mb-4">Resources</h3>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <Link to="/publications" className="text-gray-400 hover:text-white">
-                    Publications
-                  </Link>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-400 hover:text-white">
-                    News & Events
-                  </a>
-                </li>
-                <li>
-                  <Link to="/contact" className="text-gray-400 hover:text-white">
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-lg mb-4">Contact</h3>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>GRAPES-3 Experiment</li>
-                <li>Ooty, India 643001</li>
-                <li>grapes3@tifr.res.in</li>
-                <li>Altitude: 2200m</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
-            <p>&copy; 2026 GRAPES-3 Experiment. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
