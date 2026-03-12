@@ -1,13 +1,15 @@
 export default function PublicationsPage() {
   return (
-    <div className="pt-24 min-h-screen bg-gradient-to-b from-[#1E4A73] to-[#132F4B] text-white">
+    <div className="pt-6 min-h-screen bg-gradient-to-b from-[#1E4A73] to-[#132F4B] text-white">
       <main>
 
-      <div className="mx-auto max-w-5xl px-4 py-10">
+       <div className="mx-auto max-w-5xl px-4 py-10">
 
-        <h1 className="text-center text-5xl font-bold text-white">
-          Publications
-        </h1>
+        <div className="w-screen bg-white/10 backdrop-blur-sm py-8 text-center relative left-1/2 -translate-x-1/2 mb-12">
+  <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-300 via-blue-200 to-blue-400 bg-clip-text text-transparent">
+    Publications
+  </h1>
+</div>
 
         <h2 className="text-center text-3xl font-semibold text-blue-300 tracking-wide">
           Journals

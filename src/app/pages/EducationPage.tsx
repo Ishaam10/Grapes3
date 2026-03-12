@@ -1,16 +1,14 @@
 export default function EducationPage() {
   return (
-    <div className="pt-24 min-h-screen bg-gradient-to-b from-[#1E4A73] to-[#132F4B] text-white">
+    <div className="pt-6 min-h-screen bg-gradient-to-b from-[#1E4A73] to-[#132F4B] text-white">
 
       <main className="mx-auto max-w-5xl px-6 py-12">
 
         {/* PAGE TITLE */}
-        <div className="text-center mb-12">
-  <h1 className="text-5xl font-semibold text-white">
+<div className="w-screen bg-white/10 backdrop-blur-sm py-8 text-center relative left-1/2 right-1/2 -mx-[50vw] mb-12">
+  <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-300 via-blue-200 to-blue-400 bg-clip-text text-transparent">
     Education
   </h1>
-
-  <div className="w-24 h-1 bg-blue-400 mx-auto mt-4 rounded"></div>
 </div>
 
         {/* WINTER SCHOOL */}
@@ -20,15 +18,9 @@ export default function EducationPage() {
             Winter School on AstroParticle Physics
           </h2>
 
-          <p className="text-gray-300 leading-relaxed">
-            The Winter School on Astroparticle Physics (WAPP), later renamed the School on
-            Experimental Astroparticle Physics (SEAP) since 2025, is being held in association
-            with the Bose Institute, Kolkata. The philosophy of WAPP is to expose young minds
-            to the excitement in the field of experimental high energy astroparticle physics.
-            Students gain hands-on experience working with state-of-the-art equipment such as
-            high-speed electronics, photomultiplier tubes and plastic scintillators to measure
-            the properties of muons and explore real scientific research.
-          </p>
+          <p className="text-gray-300 leading-relaxed text-justify">
+  The Winter School on Astroparticle Physics (WAPP), later renamed the School on Experimental Astroparticle Physics (SEAP) since 2025, is being held in association with the Bose Institute, Kolkata. The philosophy of WAPP is to expose young minds to the excitement in the field of experimental high energy astroparticle physics. The students would have an opportunity to acquire hands-on experience by working with state-of-the-art equipment. They would be using high speed electronics, fast photomultiplier tubes, plastic scintillators etc. to make measurements on the properties of muons, exposing them to the excitement of original research. The students participating in WAPP would be exposed to the modern concepts in these areas which should motivate them to take up a career of research in this frontier area.
+</p>
 
         </section>
 
@@ -50,7 +42,7 @@ export default function EducationPage() {
               <tbody>
 
                 <tr>
-                  <td className="border border-slate-500 p-2 text-blue-300">2025</td>
+                  <td className="border border-slate-500 p-2">2025</td>
                   <td className="border border-slate-500 p-2">Cosmic Ray Laboratory, Ooty, India</td>
                   <td className="border border-slate-500 p-2">35</td>
                 </tr>

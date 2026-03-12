@@ -1,14 +1,15 @@
 export default function OutreachPage() {
   return (
-    <div className="pt-24 min-h-screen bg-gradient-to-b from-[#1E4A73] to-[#132F4B] text-white">
+    <div className="pt-6 min-h-screen bg-gradient-to-b from-[#1E4A73] to-[#132F4B] text-white">
 
       <main className="mx-auto max-w-5xl px-6 py-12">
 
         {/* PAGE TITLE */}
-        <div className="text-center mb-12">
-          <h1 className="text-5xl font-semibold text-blue-200">Outreach</h1>
-          <div className="w-24 h-1 bg-blue-400 mx-auto mt-4 rounded"></div>
-        </div>
+       <div className="w-screen bg-white/10 backdrop-blur-sm py-8 text-center relative left-1/2 -translate-x-1/2 mb-12">
+  <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-300 via-blue-200 to-blue-400 bg-clip-text text-transparent">
+    Outreach
+  </h1>
+</div>
 
         {/* PUBLIC EVENTS */}
         <h2 className="text-4xl text-center text-blue-200 mb-10">
